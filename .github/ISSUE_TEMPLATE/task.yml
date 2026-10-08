@@ -1,0 +1,22 @@
+name: 🔧 Task
+description: Créer une tâche technique
+title: "[TASK] "
+labels:
+  - "type: task"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] Code terminé
+        - [ ] Tests ajoutés
+        - [ ] Documentation mise à jour
+        - [ ] Review effectuée

@@ -1,0 +1,29 @@
+name: Project automation
+
+on:
+  issues:
+    types:
+      - opened
+      - closed
+      - reopened
+      - assigned
+  pull_request:
+    types:
+      - opened
+      - closed
+      - converted_to_draft
+      - ready_for_review
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Project automation
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          echo "Action: ${{ github.event.action }}"
